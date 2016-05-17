@@ -33,7 +33,7 @@ class FormatListener
     /**
      * Initialize FormatListener.
      *
-     * @param FormatNegotiatorInterface $formatNegotiator
+     * @param FormatNegotiator $formatNegotiator
      */
     public function __construct(FormatNegotiatorInterface $formatNegotiator)
     {

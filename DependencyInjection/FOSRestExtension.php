@@ -379,6 +379,10 @@ class FOSRestExtension extends Extension implements PrependExtensionInterface
             if ($config['exception']['exception_controller']) {
                 $container->setParameter('fos_rest.exception_listener.controller', $config['exception']['exception_controller']);
             }
+            
+            if ($config['exception']['exception_format']) {
+                $container->getDefinition('fos_rest.exception.response_formatter')->replaceArgument(0, $config['exception']['exception_controller']);
+            }
 
             $container->setParameter('fos_rest.exception.debug', $config['exception']['debug']);
         }

@@ -52,5 +52,8 @@
             <tag name="serializer.normalizer" />
         </service>
 
+        <service id="fos_rest.view_handler.api_problem" class="FOS\RestBundle\View\ApiProblemHandler" public="false">
+        </service>
+
     </services>
 </container>
